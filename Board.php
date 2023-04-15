@@ -38,6 +38,15 @@ class Board {
     }
 
     /**
+     * Get board size
+     * 
+     * @return int
+     */
+    public function getBoardSize(): int {
+        return $this->boardSize;
+    }
+
+    /**
      * Intialize Cells
      * 
      * @return void
@@ -102,7 +111,7 @@ class Board {
      * 
      * @return Cell
      */
-    private function getCell(int $playerPosition): Cell {
+    public function getCell(int $playerPosition): Cell {
         $boardRow = $playerPosition / $this->boardSize;
         $boardColumn = $playerPosition % $this->boardSize;
 

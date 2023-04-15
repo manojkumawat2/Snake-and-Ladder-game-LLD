@@ -5,9 +5,9 @@ require_once "./Jump.php";
 class Cell {
 
     /**
-     * @var Jump
+     * @var Jump|null
      */
-    private $jump;
+    private $jump = null;
 
     /**
      * Cell constructor
@@ -29,9 +29,9 @@ class Cell {
     /**
      * Get jump
      * 
-     * @return Jump
+     * @return Jump|null
      */
-    public function getJump(): Jump {
+    public function getJump(): ?Jump {
         return $this->jump;
     }
 }
